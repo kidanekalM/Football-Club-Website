@@ -82,6 +82,7 @@ footer{
     }
     img.menu:hover~nav{
         display: block;
+        width: min-content;
         flex-direction: row;
         height: max-content;
         background-color: rgb(59, 59, 59);
