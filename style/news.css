@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  word-spacing: 9px;
+}
+body {
+}
+.wrapper {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    180deg,
+    rgb(220, 255, 220),
+    rgba(255, 255, 220),
+    rgba(220, 255, 220)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+main {
+  width: 85%;
+  margin: 5vh 0vh;
+  margin-top: 0px;
+  align-self: center;
+  background-color: white;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+}
+
+div.wrapper main figure img {
+  /* background-image: url(); */
+  width: 100%;
+  border-radius: 0px 0px 50px 0px;
+}
+main h1.title {
+  text-align: center;
+  color: rgb(0, 36, 0);
+}
+main p.date {
+  text-align: end;
+}
+main article {
+  width: 80%;
+  align-self: center;
+  font-size: 1.3rem;
+  padding-bottom: 5vh;
+}
+
+section.other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+  /* background-color: rgb(255, 255, 255); */
+  margin-bottom: 5vh;
+  width: 95%;
+  gap: 20px;
+}
+section.other figure img {
+  width: 333px;
+  opacity: 0%;
+  display: none;
+  border-radius: 30px;
+}
+section.other figure {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(70%);
+  /* height: 300px; */
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 30px;
+  width: max-content;
+  align-self: center;
+  padding-bottom: 10px;
+  display: grid;
+  text-align: center;
+  background-image: url("../img/fight.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: baseline;
+  align-items: baseline;
+}
+
+section.other figure:hover {
+  filter: brightness(100%);
+}
+section.other figcaption {
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, yellow, green);
+  height: min-content;
+  height: 30%;
+  position: relative;
+  top: 76%;
+  justify-self: end;
+  align-self: baseline;
+  border-radius: 0px 0px 30px 30px;
+}
+
+section figure p {
+  color: grey;
+  padding: 0px 10px;
+  /* background-color: rgba(255, 255, 255, 0.952); */
+}
+button.more {
+  border-radius: 10px;
+  width: 20%;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  border-radius: 20px;
+  align-self: center;
+  background-color: rgb(255, 255, 135);
+  border: 0px;
+  margin: 3%;
+  padding: 5px;
+}
+button.more:hover {
+  animation-name: buttonhover;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  background-color: rgb(155, 255, 125);
+}
+@keyframes buttonhover {
+  from {
+    background-color: rgb(255, 255, 135);
+  }
+  to {
+    background-color: rgb(155, 255, 125);
+  }
+}
+button img {
+  width: 20px;
+}
