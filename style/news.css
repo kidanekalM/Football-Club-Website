@@ -35,7 +35,15 @@ main {
   flex-direction: column;
   grid-area: main;
 }
-
+main img.share{
+  width: 40px;
+  border-radius: 20px;
+  background-color: yellow;
+  padding: 7px;
+}
+main img.share:hover{
+  background-color: green;
+}
 div.wrapper main figure img {
   /* background-image: url(); */
   width: 100%;
