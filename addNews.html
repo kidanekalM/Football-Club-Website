@@ -11,12 +11,13 @@
 <body>
     <div class="wrapper">
         <form action="post">
-          
+            <div class="ball"></div>
+            <h1>Add News</h1>
 
                 <input type="text" placeholder="Title of the News"  id="title" class="title" value="">
           
                 
-                <label for="myImage"><figure>  <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />  <img src="" alt=""> </figure></label>
+                <label for="myImage"><figure class="image"><h2>Add Image</h2>  <input type="file" name="myImage" id="myImage" accept="image/x-png,image/gif,image/jpeg" />  <img src="" alt=""> </figure></label>
             <textarea name="description" id="description" placeholder="Description of the news" cols="30" rows="10"></textarea>
             <div class="other"><input type="reset" value="clear"> <input type="submit" value="submit"></div>
         </form>
@@ -24,3 +25,4 @@
     </div>
 </body>
 </html>
+<script src="script/addNews.js"></script>
