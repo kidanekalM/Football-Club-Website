@@ -11,6 +11,8 @@ body {
 .wrapper {
   width: 100vw;
   padding-top: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
   box-sizing: border-box;
   min-height: max-content;
   display: grid;
@@ -87,7 +89,7 @@ aside.other {
   margin-bottom: 5vh;
   width: 95%;
   gap: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(197, 197, 197);
   grid-area: other;
   padding: 2%;
   border-radius: 10px;
@@ -108,7 +110,7 @@ aside section{
   
 }
 aside.other figure img {
-  width: 333px;
+  min-width: 333px;
   opacity: 0%;
   display: none;
   border-radius: 10px;

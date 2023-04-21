@@ -10,6 +10,7 @@ below is the code for the above schema
 ********************************************/
 CREATE DATABASE FootballDB;
 USE FootballDB;
+/*
 CREATE TABLE Admin(
 	id INT PRIMARY KEY NOT NULL auto_increment, 
     FName VARCHAR(45) NOT NULL,
@@ -18,6 +19,7 @@ CREATE TABLE Admin(
     Pnumber VARCHAR(10) NOT NULL UNIQUE,
     Password VARCHAR(20) NOT NULL
 );
+*/
 CREATE TABLE User(
 	id INT PRIMARY KEY NOT NULL auto_increment, 
     FName VARCHAR(45) NOT NULL,
@@ -33,7 +35,7 @@ CREATE TABLE Merch(
     Price DECIMAL,
     Amount INT
 );
-CREATE TABLE Sales(
+CREATE TABLE Orders(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     MerchID INT  NOT NULL,
     UserID INT NOT NULL,

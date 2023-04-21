@@ -9,7 +9,8 @@
 }
 body{
 
-    background-image: url('../img/beforeGame.jpg');
+    /* background-image: url('../img/beforeGame.jpg'); */
+    background-color: gainsboro;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -33,8 +34,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 245, 190);
-    box-shadow: 2px 2px 2px grey;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
     border-radius: 20px;
 }
 main section{
@@ -46,6 +47,7 @@ main section{
     justify-content: center;
     text-align: center;
     font-size: 1.8vw;
+    grid-area: section;
    
     }
 main section figure {
@@ -66,8 +68,8 @@ main button{
     border: none;
     font-size: 2.5vw;
     margin: 3vh;
-    background-color: green;
-    color: yellow;
+    background-color: rgb(255, 255, 255);
+    color: green;
     border: 1px solid yellow;
     padding: 2px 4vw;
     border-radius: 20px;
@@ -76,9 +78,9 @@ main button{
     
 }
 main button:hover{
-    background-color: yellow;
-    color: green;
-    border: 1px solid green;
+    color: yellow;
+    background-color: green;
+    border: none;
 
 }
 .wrapper aside{
@@ -95,6 +97,7 @@ aside{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    grid-area: aside;
 }
 aside section{
     display: flex;
@@ -131,4 +134,21 @@ main button:hover{
     color: green;
     border: 1px solid green;
 
+}
+@media (max-width:768px) {
+    .wrapper{
+        padding: 1vw;
+        width: 100vw;
+        grid-template-areas: 'main'' aside';
+    }
+   .wrapper main{
+        width: 80vw;
+    }
+    .wrapper aside section {
+        font-size: .8rem;
+    }
+    aside .vs{
+        font-size: 1rem;
+    }
+    
 }
