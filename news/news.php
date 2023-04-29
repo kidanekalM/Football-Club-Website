@@ -13,13 +13,21 @@
     <div class="wrapper">
       <main>
         <?php
+          $id = $_GET['id'];
           include ("../connect.php");
           $conn = new connect;
           $conn = $conn->getConn();
           if($conn){
             $sql = "select * from news order by Date desc";
             $allNews = $conn->query($sql);
-            $latest = $allNews->fetch_assoc();
+            if($id){
+              $latest = $conn->query("select * from news where id = ".$id .";")->fetch_assoc();
+              echo "<script>console.log(".$id.")</script>";
+            }
+            else{
+              $latest = $allNews->fetch_assoc();
+              echo "<script>console.log(".$id.")</script>";
+            }
             echo "<figure class='pic'> <img src=".$latest['PicLocation']." alt='' /> </figure>";
             echo "<h1 class='title'>".$latest['Title']."</h1>";
             echo "<img class='share' title='Copy Link' id='share' src='img/share.png' >";
@@ -54,11 +62,14 @@
         <section>
         <?php
             while($other = $allNews->fetch_assoc()){
-              echo "<figure class='pic' >
+              if($other['id']==$id){
+                continue;
+              }
+              echo "<a href = 'news.php?id=".$other['id']."'> <figure class='pic'>
               <img src=".$other['PicLocation']." />
               <figcaption>
                 <h3>".$other['Title']."</h3>
-                <p>"$other['Description']"</p>
+                <p>".$other['Description']."</p>
               </figcaption>
             </figure>";
             }
@@ -106,7 +117,7 @@
           </figcaption>
         </figure>
       </section>
-        <button class="more"><img src="img/more.png" alt="" /> more</button>
+        <!-- <button class="more" type ="submit"><img src="img/more.png" alt=""/> more</button> -->
     </aside>
     </div>
   </body>

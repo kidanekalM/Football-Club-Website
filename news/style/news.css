@@ -119,7 +119,7 @@ aside.other figure img {
 aside.other figure {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* height: 300px; */
-  width: 300px;
+  width: 250px;
   height: 200px;
   background-color: white;
   border-radius: 10px;
@@ -141,7 +141,7 @@ aside.other figure {
   align-self: center;
   
   border-radius: 10px;
-  width: 300px;
+  width: 200px;
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
   font-size: 1.5rem;
   
@@ -164,7 +164,7 @@ aside.other figcaption {
   border-radius: 0px 0px 10px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 300px;
+  width: 300px;
   width: 100%;
 }
 /* aside.other figcaption:hover{
@@ -228,5 +228,7 @@ button img {
                           ' other';
                           align-content: space-around;
   }
-   
+  aside.other{
+    padding: 1%;
+  } 
 }
