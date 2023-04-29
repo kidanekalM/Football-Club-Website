@@ -13,8 +13,10 @@
     padding: 3vh 5vw;
     align-content: center;
     justify-content: center;
+    
     /* background-image: url('../img/emptyStadium.png'); */
-    background-color: rgb(225, 255, 224);
+    /* background-image: linear-gradient(180deg,rgb(27, 27, 27),rgb(250,60,0)); */
+    background-color: rgb(238, 238, 238);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -23,7 +25,7 @@
     margin: 2vh;
     font-size: 3rem;
     text-transform: uppercase;
-    background-image: linear-gradient(180deg,rgb(78, 172, 78),rgb(150, 150, 71));
+    background-image: linear-gradient(180deg,rgb(0, 0, 0),rgb(150, 71, 71));
     background-clip: text;
     color: transparent;
     grid-area: pageName;
@@ -32,7 +34,7 @@ form{
     display: grid;
     width: 100%;
     height: max-content;
-    border-radius: 20px;
+    border-radius: .5rem;
     align-content: center;
     justify-content: center;
     /* grid-template-rows: .5fr 10fr 1fr; */
@@ -45,7 +47,8 @@ form{
                         gap: 20px;
     opacity: 100%;
     padding: 2vw;
-    background-image: linear-gradient(180deg,transparent,rgb(255, 255, 219));
+    /* background-image: linear-gradient(180deg,transparent,rgb(255, 255, 219)); */
+    background-color: rgb(252, 252, 252);
     box-shadow: 2px 2px 2px 2px rgb(184, 184, 184);
 }
 div.ball{
@@ -63,7 +66,7 @@ div.ball{
 }
 figure {
     height: 50vh;
-    border-radius: 1.1rem;
+    border-radius: .5rem;
     font-size: 1rem;
     grid-area: img;
     initial-value: url('../img/edit.png');
@@ -75,11 +78,11 @@ figure {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    color: rgb(0, 82, 0);
+    color: rgb(0, 0, 0);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 1px solid green;
+    border: 1px solid rgb(255, 60, 0);
     overflow: hidden;
     text-align: center;
     
@@ -93,18 +96,18 @@ figure h2{
     width: min-content;
 }
 textarea{
-    border: 1px solid green;
+    border: 1px solid #dc0116;
 }
 input:focus{
     border: none;
-    border:1px solid yellow;
+    border:1px solid rgb(255, 60, 0);
 }
 input.title{
     font-size: 1.3rem;
-    border-radius: 1.1rem;
+    border-radius: .5rem;
     padding: .5rem;
     grid-area: title;
-    border: 1px solid green ;
+    border: 1px solid rgb(128, 0, 0) ;
     box-shadow: 2px 2px 2px rgb(185, 185, 185);
 }
 input.title:focus{
@@ -114,7 +117,7 @@ textarea{
     font-size: 1.1rem;
     padding: 1rem;
     height: 60vh;
-    border-radius: 1.1rem;
+    border-radius: .5rem;
     grid-area: description;
 }
 div.other{
@@ -127,18 +130,20 @@ div.other{
 div.other input{
     /* background-image: linear-gradient(180deg,green,yellow); */
     background-color: white;
-    border: 3px solid yellow;
-    color: green;
+    border: 3px solid rgb(255, 60, 0);
+    color: rgb(0, 0, 0);
     font-size: 1.3rem;
     width: 40%;
-    border-radius: 1.1rem;
+    border-radius: .5rem;
     padding: .5rem;
     grid-area: title;
-    background-color: white;
+    /* background-color: white; */
 }
 div.other input:hover{
-    background-color: green;
-    color: yellow;
+    background-image: linear-gradient(180deg,#f2bb11,#ee6913,#e51922);
+
+    background-color: rgb(255, 60, 0);
+    color: rgb(255, 255, 255);
     border: none;
 }
 @media (max-width:768px) {

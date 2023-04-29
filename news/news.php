@@ -35,24 +35,6 @@
             echo "<article class='text'><p>".$latest['Description']."</p></article>";
           }
         ?>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-        </figure>
-        <h1 class="title">Title News</h1>
-        
-        
-        <p class="date">Monday Jan 2021</p>
-        <article class="text">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse,
-            adipisci consectetur. Sequi aperiam praesentium impedit officiis
-            neque molestiae fuga, quasi eius veniam, cumque officia quisquam!
-            Vitae aliquam illo dolor repudiandae deserunt necessitatibus
-            voluptates porro similique iste, recusandae aperiam sequi enim
-            debitis dolorum doloremque quos! Nostrum porro possimus sint.
-            Reiciendis, praesentium.
-          </p>
-        </article>
       </main>
       <div class="empty"></div>
       <aside class="other">
@@ -74,48 +56,6 @@
             </figure>";
             }
         ?>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h3>News Title</h3>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h3>News Title</h3>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h3>News Title</h3>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h1>News Title</h1>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h3>News Title</h3>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
-        <figure class="pic">
-          <img src="img/fight.jpg" alt="" />
-          <figcaption>
-            <h1>News Title</h1>
-            <p>The fight has alrrready begun</p>
-          </figcaption>
-        </figure>
       </section>
         <!-- <button class="more" type ="submit"><img src="img/more.png" alt=""/> more</button> -->
     </aside>
