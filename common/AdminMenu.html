@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="AdminMenu.css" />
+  </head>
+  <body>
+    <div class="menuwrapper">
+      <img src="../img/more.png" alt="" class="menuicon" id="menuicon">
+      <ul class="sidemenu" id="sidemenu">
+          <a href=""><img src="../img/home.png" alt=""><li class="mi"> Dashboard</li></a>
+          <a href=""><img src="../img/soccer-player.png" alt=""><li class="mi">Manage Team</li></a>
+          <a href=""><img src="../img/soccer-game.png" alt=""><li class="mi">Manage Fixture</li></a>
+          <a href=""><img src="../img/news.png" alt=""><li class="mi">Manage News</li></a>
+          <a href=""><img src="../img/shopping-cart.png" alt=""><li class="mi">Manage Merch</li></a>
+      </ul>
+        <script>
+          let menu = document.getElementById("menuicon");
+          let mi = document.getElementsByClassName("mi");
+          let ul = document.getElementById("sidemenu") 
+          // mi = Array.from(mi);
+          menu.addEventListener("click",function () {
+
+            if(!(mi[0].style.display=="none")){
+              for (let key=0;key<mi.length;key++) {
+                mi[key].style.display="none";
+                ul.style.display = "none";
+              }
+            }
+            else{
+              for (let key=0;key<mi.length;key++) {
+                mi[key].style.display="block";
+                ul.style.display = "flex";
+              }
+            }
+            });
+
+        </script>
+    </div>
+  </body>
+</html>
