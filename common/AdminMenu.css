@@ -73,12 +73,29 @@ ul.sidemenu a:hover{
     color: white;
     background-image: linear-gradient(90deg,#fff7e3,#f47c03,#ff0800,#f47c03,#ff0800);
 }
-@media (orientation:portrait) {
+@media (orientation:landscape) {
     li.mi{
         font-size: 1rem;
     }
-    ul.sidemenu a img{
-        width: 1.5rem;
-        height: 1.5rem;
+    ul.sidemenu {
+        flex-direction: row;
+    }
+    div.menuwrapper img{
+        display: none;
+    }
+    ul.sidemenu a{
+        box-sizing: border-box;
+        margin:0px;
+        padding:5px;
+        border-radius: 5px;
+    
+        border: 1px solid transparent;
+    
+        font-size: 1.2rem;
+        border: 1px solid rgba(0, 0, 0, 0);
+        box-shadow: none;
+        background-image: none;
+        /* color: white; */
+    
     }
 }
