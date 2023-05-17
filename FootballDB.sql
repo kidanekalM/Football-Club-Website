@@ -31,6 +31,7 @@ CREATE TABLE User(
 CREATE TABLE Merch(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     PicLocation VARCHAR(300), /*lOCATION OF THE PICTURE IN THE FILE SYSTEM */
+    Name VARCHAR(100),
     Price DECIMAL,
     Amount INT
 );
@@ -52,14 +53,16 @@ CREATE TABLE Team(
     Age INT,
     Status VARCHAR(50)
 );
-CREATE TABLE News(
-	id INT PRIMARY KEY NOT NULL auto_increment, 
-    Title VARCHAR(100) NOT NULL,
-    PicLocation VARCHAR(300),
-    Description TEXT,
-    Date TIMESTAMP 
+CREATE TABLE News(                             
+	id INT PRIMARY KEY NOT NULL auto_increment,
+    Title VARCHAR(100) NOT NULL,               
+    PicLocation VARCHAR(300),                  
+    Description TEXT,                          
+    Date TIMESTAMP                             
 );
-CREATE TABLE Fixtures(
-Name VARCHAR(45),
-DATE DATETIME
+CREATE TABLE Fixtures(                         
+	id INT PRIMARY KEY NOT NULL auto_increment,
+	Name VARCHAR(45),                          
+    location varchar(100),                     
+	DATE DATETIME                              
 );

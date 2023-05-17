@@ -20,24 +20,16 @@
         <script>
           let menu = document.getElementById("menuicon");
           let mi = document.getElementsByClassName("mi");
-          let ul = document.getElementById("sidemenu") 
+          let ul = document.getElementsByClassName("sidemenu")[0]; 
           // mi = Array.from(mi);
           menu.addEventListener("click",function () {
-
-            if(!(mi[0].style.display=="none")){
-              for (let key=0;key<mi.length;key++) {
-                mi[key].style.display="none";
+            if(!(ul.style.display=="none")){
                 ul.style.display = "none";
-              }
             }
             else{
-              for (let key=0;key<mi.length;key++) {
-                mi[key].style.display="block";
                 ul.style.display = "flex";
-              }
             }
             });
-
         </script>
     </div>
   </body>

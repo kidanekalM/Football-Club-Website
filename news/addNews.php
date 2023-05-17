@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/addNews.css">
 </head>
 <body>
+
     <div class="wrapper">
         <form action="" method="post" enctype="multipart/form-data" >
             <div class="ball"></div>

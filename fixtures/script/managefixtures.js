@@ -1,8 +1,25 @@
 let edit = document.getElementById('editFixture')
 let del = document.getElementById('deleteFixture')
-let save = document.getElementById('save')
+// let save = document.getElementById('save')
 let add = document.getElementById('add')
 let submit = document.getElementById('submit')
+
+function name(params) {
+    alert("try new things");
+}
+add.addEventListener('click',function () {
+    submit.parentElement.parentElement.parentElement.style.display='flex'
+    console.log(submit.parentElement.parentElement);
+
+  })
+function showEditForm() {
+    add.addEventListener('click',function () {
+
+        submit.parentElement.parentElement.style.display='flex'
+    
+      })
+}
+/*
 edit.addEventListener('click',function() {
     
     let fixture=this.parentElement.parentElement
@@ -43,14 +60,9 @@ function saveclick () {
         Arr[i].innerText= inp[i].value;
     }
 
-    /**
-     * Send to database
-     */
+ 
 }
-add.addEventListener('click',function () {
-    submit.parentElement.parentElement.style.display='flex'
 
-  })
   submit.addEventListener('click',function () {
     let newfix = document.getElementsByClassName('fixture')[0].cloneNode(true)
     let form = document.getElementsByClassName('addFixture')[0]
@@ -76,3 +88,5 @@ add.addEventListener('click',function () {
     }
     this.parentElement.parentElement.style.display='none'
     })
+
+    */
