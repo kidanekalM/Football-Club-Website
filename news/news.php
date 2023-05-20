@@ -7,26 +7,31 @@
     <title>News</title>
     <link rel="stylesheet" href="style/news.css" />
     <link rel="shortcut icon" href="img/logo3.png" type="image/x-png" />
-    <script src="script/news.js"></script>
   </head>
   <body>
     <div class="wrapper">
+    <?php
+    include ('../common/adminMenu.php');
+    // echo $header;
+    ?>
       <main>
         <?php
-          $id = $_GET['id'];
+        if(isset($_get['id']))
+          {$id = $_GET['id'];
+          }
           include ("../connect.php");
           $conn = new connect;
           $conn = $conn->getConn();
           if($conn){
             $sql = "select * from news order by Date desc";
             $allNews = $conn->query($sql);
-            if($id){
+            if(isset($_GET['id'])){
+              $id=$_GET['id'];
               $latest = $conn->query("select * from news where id = ".$id .";")->fetch_assoc();
               echo "<script>console.log(".$id.")</script>";
             }
             else{
               $latest = $allNews->fetch_assoc();
-              echo "<script>console.log(".$id.")</script>";
             }
             echo "<figure class='pic'> <img src=".$latest['PicLocation']." alt='' /> </figure>";
             echo "<h1 class='title'>".$latest['Title']."</h1>";
@@ -44,11 +49,11 @@
         <section>
         <?php
             while($other = $allNews->fetch_assoc()){
-              if($other['id']==$id){
+              if(isset($id) && $other['id']==$id){
                 continue;
               }
-              echo "<a href = 'news.php?id=".$other['id']."'> <figure class='pic'>
-              <img src=".$other['PicLocation']." />
+              echo "<a href = 'news.php?id=".$other['id']."'> <figure class='pic' style='background-image:url(".$other['PicLocation'].")'>
+              <img src= />
               <figcaption>
                 <h3>".$other['Title']."</h3>
                 <p>".$other['Description']."</p>
@@ -63,3 +68,5 @@
   </body>
   
 </html>
+<script src="script/news.js"></script>
+

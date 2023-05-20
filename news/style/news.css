@@ -1,3 +1,4 @@
+@import url('../../common/AdminMenu.css');
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -28,9 +29,10 @@ body {
   flex-direction: column;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   /* grid-template-rows: 1fr 1fr 1fr; */
-  row-gap: 20vh;
-  padding-top: 20vh;
-  grid-template-areas: 'main main main other'
+  row-gap: 2vh;
+  /* padding-top: 20vh; */
+  grid-template-areas:  'header header header header'
+                        'main main main other'
                         'main main main other'
                         'main main main other';
                         align-content: space-around;
@@ -50,14 +52,17 @@ main {
   border-radius: 10px;
 }
 main img.share{
-  width: 50px;
-
+  width: 40px;
+  box-shadow: 1px 1px 2px 1px grey;
   border-radius: 10px;
-  background-color: rgb(255, 255, 177);
-  padding: 7px;
+  background-image: linear-gradient(180deg,rgb(255, 115, 0),orange);
+  padding: 5px;
 }
 main img.share:hover{
-  background-color: rgb(158, 255, 158);
+  background-image: linear-gradient(0deg,rgb(255, 115, 0),orange);
+}
+main img.share:active{
+  box-shadow: -1px -1px 2px 1px grey inset;
 }
 div.wrapper main figure img {
   /* background-image: url(); */
@@ -85,13 +90,11 @@ aside.other {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  /* background-color: rgb(255, 255, 255); */
+  justify-content: center;
   margin-bottom: 5vh;
-  width: 95%;
   gap: 20px;
-  border: 1px solid rgb(197, 197, 197);
   grid-area: other;
-  padding: 2%;
+  padding: 1%;
   border-radius: 10px;
   filter:brightness(80%);
   
@@ -119,8 +122,8 @@ aside.other figure img {
 aside.other figure {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* height: 300px; */
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
   background-color: white;
   border-radius: 10px;
   align-self: center;
@@ -134,22 +137,22 @@ aside.other figure {
   justify-content: baseline;
   align-items: baseline;
   box-shadow: 2px 2px 2px 2px #bdbdbd;
+  transition-duration: 1s;
   
 }
  aside.other h2{
   text-align: center;
   align-self: center;
-  
-  border-radius: 10px;
   width: 200px;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  border-bottom: 1px solid black;
+  /* box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2); */
   font-size: 1.5rem;
   
   align-self: center;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
 } 
 aside.other figure:hover {
-  background-size: 150%;
+  background-size: 200%;
 }
 aside.other figcaption {
   background-color: rgba(22, 22, 22, 0.89);
@@ -185,7 +188,8 @@ button.more {
   font-size: 1.5rem;
   border-radius: 20px;
   align-self: center;
-  background-color: rgb(255, 255, 135);
+  box-shadow: 0px 0px 1px 1px ;
+  background-image: linear-gradient(180deg,red,orange);
   border: 0px;
   margin: 3%;
   padding: 5px;
@@ -194,7 +198,6 @@ button.more:hover {
   animation-name: buttonhover;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
-  background-color: rgb(155, 255, 125);
 }
 @keyframes buttonhover {
   from {
@@ -213,12 +216,6 @@ button img {
     min-height: max-content;
     display: grid;
     background-color: rgb(255, 255, 255);
-    background-image: linear-gradient(
-      90deg,
-      rgb(153, 202, 153),
-      rgb(211, 211, 174),
-      rgb(144, 189, 144)
-    );
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;

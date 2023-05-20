@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0;
 
 }
 .wrapper{
@@ -9,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 1vh;
 }
 main{
     width: 80%;
@@ -42,12 +43,12 @@ header button{
     box-shadow: 0px 0px 1px 1px rgb(172, 172, 172);
 }
 header img{
-    width: 1.2rem;
+    width: 1.5rem;
 
 }
 header input{
     width: 60%;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px ;
     font-size: 1.3rem;
     
     border: 1px solid rgb(175, 175, 175);
@@ -55,14 +56,23 @@ header input{
 
     box-shadow: 0px 0px 1px 1px rgb(180, 180, 180);
 }
-header input+button{
+header input+img{
     border-radius: 0px 10px 10px 0px;
+    position: relative;
+    left: -2rem;
 }
-header input+button+button{
+header input+img+button{
     justify-self: flex-end;
     align-self: flex-end;
     margin-left: 20vw;
-    
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 1px solid orange;
+    padding: .1rem 1rem;
+}
+header input+img+button:hover{
+    background-image:linear-gradient(45deg,red,orange) ;
+    color: white;
 }
 main .fixture{
     display: flex;
@@ -77,18 +87,26 @@ main .fixture{
     box-shadow: 0px 0px 2px 2px rgb(180, 180, 180);
 }
 main .fixture:hover{
-    border: 1px solid rgb(73, 161, 78);
+    border: 1px solid rgb(255, 147, 47);
     box-shadow: 0px 0px 2px 2px rgb(174, 184, 82);
 }
 .fixture .logo{
     width: 10vh;
 }
 .fixture .icon{
-    width: 40px;
+    width: 20px;
+    height: 20px;
+}
+.fixture .icons a{
+    height: max-content;
     background-color: rgb(172, 172, 172);
     border-radius: 10px;
     padding: 5px;
     border: 2px solid yellow;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 input#submit{
     border: 1px solid orange;
@@ -107,9 +125,10 @@ input#submit:hover{
 option{
     text-align:center;
 }
-.fixture .icon:hover{
-background-color: green;
-border: none;
+.fixture .icons a:hover{
+background-color: rgb(255, 128, 9);
+background-image: linear-gradient(45deg,red,orange);
+
 }
 div.icons {
     display: flex;
@@ -160,10 +179,40 @@ div.icons {
     padding: 0px;
     margin: 0px;
 }
+p.message{
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: max-content;
+    background-color: rgba(9, 255, 0, 0.171);
+    color: rgb(48, 48, 48);
+    padding: .5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(51, 255, 0);
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: '. . .';
+}
+p button.x{
+    border: none;
+    color: darkred;
+    font-size: 1.1rem;
+    justify-self: flex-end;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: transparent;
+}
 @media (orientation:portrait) {
    main .fixture{
         padding: 4vh 4px;
         gap: .5vh;
         flex-direction: column;
+    }
+    .icons{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .icons a{
+        width: 25%;
+        height: max-content;
     }
 }

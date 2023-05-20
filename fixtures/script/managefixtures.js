@@ -1,9 +1,9 @@
-let edit = document.getElementById('editFixture')
+ edit = document.getElementById('editFixture')
 let del = document.getElementById('deleteFixture')
-// let save = document.getElementById('save')
+let searchBar = document.getElementById('searchBar')
 let add = document.getElementById('add')
 let submit = document.getElementById('submit')
-
+let allFix =  document.getElementsByClassName('fixture')
 function name(params) {
     alert("try new things");
 }
@@ -19,6 +19,18 @@ function showEditForm() {
     
       })
 }
+searchBar.addEventListener('keyup',function () {
+    let results = Array.from(allFix).filter(function (a) {
+        // console.log(a);
+        if(a.textContent.toLowerCase().includes(searchBar.value.toLowerCase())){
+            return a;
+        }
+    })
+    firstFix = document.querySelector('.fixture');
+    for(i=0;i<results.length;i++){
+        firstFix.parentElement.insertBefore(results[i],firstFix);
+    }
+})
 /*
 edit.addEventListener('click',function() {
     

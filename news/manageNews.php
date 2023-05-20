@@ -1,3 +1,6 @@
+<?php
+    include ('../common/adminMenu.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
 <body>
     <div class="wrapper">
         <h1>Manage News</h1>
-        <div class="search">
+        <div class="innerHeader">
                 <!-- <select name="" id=""><option value="Name"> Name</option>
                 <option value="Date"> Date</option>
                 </select> -->
@@ -19,6 +22,9 @@
 
             <button id="btn_search"><img src="img/search.png" alt=""></button>
             
+            <button class="add">
+                <img src="img/add.png" alt="">
+            </button>
         </div>
         <main>
         <?php

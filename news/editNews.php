@@ -58,6 +58,8 @@
                 //echo "<br>".$sql."<br>";
                 if($conn->query($sql)){
                     echo "<script> console.log('Changed')</script>";
+                    echo "<script>alert('updated successfully!')</script>";
+                    header("Refresh: 1; URL=managenews.php");
                 }
                 else{
                     echo "<script>alert('Changed') console.log('Not Changed')</script>";

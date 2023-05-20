@@ -59,6 +59,7 @@
                     
                     if( $conn->query($sql)){
                         echo '<script>alert("added successfully!") </script>';
+                        header("Refresh: 1; URL=managenews.php");
                     }
                     else{
                         echo '<script>alert("'.$conn->error.'!") </script>';
