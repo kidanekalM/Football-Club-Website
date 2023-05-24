@@ -91,7 +91,7 @@
                     "customization[description]": " on '.$other['DATE'].' "
                     }',
                     CURLOPT_HTTPHEADER => array(
-                        'Authorization: CHASECK_TEST-jemo02JnnrUo4NknnTHa3BWCNRnPe9wY',
+                        'Authorization: Bearer CHASECK_TEST-jemo02JnnrUo4NknnTHa3BWCNRnPe9wY',
                         'Content-Type: application/json'
                     ),
                     ));
@@ -99,12 +99,12 @@
                     $response = curl_exec($curl);
                     $response = json_decode($response,true);
                     curl_close($curl);
-                    print_r($response['data']['checkout_url']);
-                    // echo $response['da;
+                    // print_r($response['data']['checkout_url']);
+                    // echo $response;
                     header('Location: '.$response['data']['checkout_url']);
                 }
                 else{
-                    echo '<script>alert("naaa")</script>';
+                    // echo '<script>alert("naaa")</script>';
                 }
             
             }
