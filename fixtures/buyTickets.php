@@ -91,7 +91,7 @@
                     "customization[description]": " on '.$other['DATE'].' "
                     }',
                     CURLOPT_HTTPHEADER => array(
-                        'Authorization: Bearer Your Secret Key',
+                        'Authorization: CHASECK_TEST-jemo02JnnrUo4NknnTHa3BWCNRnPe9wY',
                         'Content-Type: application/json'
                     ),
                     ));
