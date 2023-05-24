@@ -53,7 +53,7 @@
                     <?php  echo "<input required type='number' id='price' name ='price' value=".$resultTicket['Price'].">";?>
                     <label for="date"><h2>Location</h2></label>
                     <?php  echo "<input required type='text' id='location' name ='location' value=".$result['location'].">";?>
-                    <label for="tickets"><h2>number of tickets</h2></label>
+                    <label for="tickets"><h2>Ticket Price</h2></label>
                     <?php  echo "<input required type='number' id='tickets' name='tickets' value=".$resultTicket['Amount'].">";?>
                     <input type="submit" value="Update" id="submit" name="submit">
                 </form>
@@ -63,10 +63,10 @@
             if(isset($_POST['submit'])){
                 // echo "update fixtures set name='".$_POST['name']."',date='".$_POST['date']."',location='".$_POST['location']."' where id =".$id . "<br>";
                 // echo "update merch set name ='"."Phoenix vs ".$_POST['name']." on ".$_POST['date']."' where name = '".$resultTicket['name']. "'";
-                $result = mysqli_query($conn,"update fixtures set name='".$_POST['name']."',date='".$_POST['date']."',location='".$_POST['location']."' where id =".$id);
-                $resultTicket = mysqli_query($conn,"update merch set name ='"."Phoenix vs ".$_POST['name']." on ".$_POST['date']."' where name = '".$resultTicket['name']. "'");
+                $result = mysqli_query($conn,"update fixtures set name='".$_POST['name']."',date='".$_POST['date']."',location='".$_POST['location']."',ticketPrice="$_POST['tickets']" where id =".$id);
+                // $resultTicket = mysqli_query($conn,"update merch set name ='"."Phoenix vs ".$_POST['name']." on ".$_POST['date']."' where name = '".$resultTicket['name']. "'");
 
-                if($result && $resultTicket){
+                if($result){
                     echo "<script>alert('updated successfully!')</script>";
                     header("Refresh: 1; URL=managefixtures.php");
                 }

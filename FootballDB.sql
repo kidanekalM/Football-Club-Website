@@ -64,7 +64,8 @@ CREATE TABLE Fixtures(
 	id INT PRIMARY KEY NOT NULL auto_increment,
     -- ticketId INT,                              
 	Name VARCHAR(45),                          
-    location varchar(100),                     
+    location varchar(100),  
+    ticketPrice DECIMAL,                   
 	DATE DATE,                             
     -- CONSTRAINT FOREIGN KEY (ticketId) REFERENCES Merch(ID)
 );

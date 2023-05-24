@@ -53,8 +53,14 @@ div.innerHeader button:hover:active{
 div.innerHeader button.add{
   justify-self: end;
   margin: 0vw 1vw;
-  width: 1rem;
+  width: 2rem;
   border-radius: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.innerHeader button.add img{
+  width: 2rem;
 }
 div.innerHeader button:hover{
   background-image: linear-gradient(90deg,rgba(128, 87, 0, 0.432),rgba(255, 255, 0, 0.432));

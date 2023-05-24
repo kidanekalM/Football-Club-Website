@@ -40,7 +40,7 @@
                         
                             <p class='detail date'>".$latest['DATE']."</p>
                             <p class='detail location'>".$latest['location']."</p>
-                            <a href='Merch.php?id=".$ticket['id']."'><button id='buy' >Buy Ticket Now</button></a>
+                            <a href='buyTickets.php?id=".$ticket['id']."'><button id='buy' >Buy Ticket Now</button></a>
                     
                         </main>";  
                 ?>
@@ -61,19 +61,22 @@
                             <figure class='opponent'>
                             <img src='img/".$other['Name'].".png' alt='Team Logo' class='logo'>
                                 <figcaption>
-                                    <h2>Loosing Team</h2>
+                                    <h2>".$other['Name']."</h2>
                                 </figcaption>
                             </figure>
                             
                             </section>
                             <p class='detail date'>".$other['DATE']."</p>
                             <p class='detail location'>".$other['location']."</p>
-                            <a href='Merch.php?id=".$other['id']."'><button id='buy' >Buy Ticket Now</button></a>
+                            <a href='buyTickets.php?id=".$other['id']."'><button id='buy' >Buy Ticket Now</button></a>
                     
                             </main>
                             ";
                     } 
                 ?>
+                <?php
+                    
+                    ?>
                
         </aside>
     </div>

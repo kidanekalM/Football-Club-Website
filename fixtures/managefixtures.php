@@ -46,9 +46,8 @@
                     <input required type="number" id="price" name ='price'>
                     <label for="date"><h2>Location</h2></label>
                     <input required type="text" id="location" name ='location'>
-                    <label for="tickets"><h2>number of tickets</h2></label>
-                    <input required type="number" id="tickets" name='tickets'>
-
+                    <!-- <label for="tickets"><h2>Ticket Price</h2></label>
+                    <input required type="number" id="tickets" name='tickets'> -->
                     <input type="submit" value="Add" id="submit" name="submit">
                 </form>
                 </div>
@@ -56,9 +55,9 @@
             <?php
                 if(isset($_POST['submit'])){
                  if($conn){
-                    $sql = "insert into merch(id,piclocation,name,price,amount) values(default,'img/ticket.png','Phoenix vs ". $_POST['name']." on ".$_POST['date']."',".$_POST['price'].",".$_POST['tickets'].")";
-                    mysqli_query($conn,$sql);
-                    $sql = "insert into Fixtures(id,name,location,date) values(default,'".$_POST['name']."','".$_POST['location']."','".$_POST['date']."')";
+                    // $sql = "insert into merch(id,piclocation,name,price,amount) values(default,'img/ticket.png','Phoenix vs ". $_POST['name']." on ".$_POST['date']."',".$_POST['price'].",".$_POST['tickets'].")";
+                    // mysqli_query($conn,$sql);
+                    $sql = "insert into Fixtures(id,name,location,date,ticketPrice) values(default,'".$_POST['name']."','".$_POST['location']."','".$_POST['date']."',".$_POST['price'].")";
                     mysqli_query($conn,$sql);
                     message( "Phoenix vs ".$_POST['name']." Added Successfully!");
                     // echo $sqlTick;
@@ -82,7 +81,7 @@
                 {
                     $fix = mysqli_query($conn, "select * from fixtures where id = ".$id)->fetch_assoc();
                     mysqli_query($conn, "delete from fixtures where id = ".$id);
-                    mysqli_query($conn, "delete from merch where name = 'Phoenix vs ".$fix['Name']." on ".$fix['DATE']."'");
+                    // mysqli_query($conn, "delete from merch where name = 'Phoenix vs ".$fix['Name']." on ".$fix['DATE']."'");
                     message("Phoenix vs ".$fix['Name']." Deleted Successfully!");
                 }
                 else{
@@ -94,37 +93,22 @@
                    $sql = "select * from fixtures order by date desc";
                    $result = mysqli_query($conn,$sql);
                    while($fixture = $result->fetch_assoc()){
-                    echo "<div class='fixture'>";
-                    echo "<img src='img/".$fixture['Name'].".png' alt ='team logo' class= 'logo'>";
-                    echo "<h3 class='name'> Team: ".$fixture['Name']."</h3>";
-                    echo "<h3 class='date'>Date: ".$fixture['DATE']."</h3>";
-                    $sql = "select amount from merch where name ='Phoenix vs ".$fixture['Name']." on ".$fixture['DATE']."'";
-                    $numTicket = mysqli_query($conn,$sql );
-                    $numTicket = $numTicket->fetch_assoc();
-                    if(isset($numTicket))
-                    {echo "<h3 class = 'tickets'>Tickets: ".$numTicket['amount']."</h3>";}
-                    echo "<div class='icons'>";
-                    echo "<a href='editfixtures.php?id=".$fixture['id']."&type=edit"."'><img id='editFixture' src='img/edit.png' alt='' class='icon edit'></a>";
-                    echo "<a href='managefixtures.php?id=".$fixture['id']."&type=delete"."'><img id='deleteFixture' src='img/delete.png' alt='' class='icon delete'></a>";
-                    echo "</div> </div>";
-
-                   }
-                //    echo $result;
-                //    print_r($result);
+                        echo "<div class='fixture'>";
+                        echo "<img src='img/".$fixture['Name'].".png' alt ='team logo' class= 'logo'>";
+                        echo "<h3 class='name'> Team: ".$fixture['Name']."</h3>";
+                        echo "<h3 class='date'>Date: ".$fixture['DATE']."</h3>";
+                        $sql = "select amount from merch where name ='Phoenix vs ".$fixture['Name']." on ".$fixture['DATE']."'";
+                        // $numTicket = mysqli_query($conn,$sql );
+                        // $numTicket = $numTicket->fetch_assoc();
+                        echo "<h3 class = 'tickets'>Ticket Price: ".$fixture['ticketPrice']."</h3>";
+                        echo "<div class='icons'>";
+                        echo "<a href='editfixtures.php?id=".$fixture['id']."&type=edit"."'><img id='editFixture' src='img/edit.png' alt='' class='icon edit'></a>";
+                        echo "<a href='managefixtures.php?id=".$fixture['id']."&type=delete"."'><img id='deleteFixture' src='img/delete.png' alt='' class='icon delete'></a>";
+                        echo "</div> </div>";
+                    }
                 }
 
             ?>
-            <div class="fixture">
-                <img src="img/logo3.png" alt="teamLogo" class="logo">
-                <h3 class="name">Team Name</h3>
-                <h3 class="date">Date</h3>
-                <h3 class="location">Location</h3>
-                <h3 class="tickets">234 tickets</h3>
-                <div class="icons">
-                    <a href=""><img id="editFixture" src="img/edit.png" alt="" class="icon edit"></a>
-                    <a href=""><img id="deleteFixture" src="img/delete.png" alt="" class="icon delete"></a>
-                </div>
-            </div>
             
         </main>
     </div>

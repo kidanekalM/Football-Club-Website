@@ -6,7 +6,7 @@ header{
     grid-area: header;
 }
 header img#logo{
-    width: 100px;
+    width: 70px;
 }
 div.menuwrapper{
     box-sizing: border-box;
@@ -74,6 +74,8 @@ li.mi{
     border: 1px solid transparent;
     font-weight: 600;
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
 
 }
 ul.sidemenu a img{
@@ -101,7 +103,7 @@ input.chkMenu{
     li.mi{
         font-size: 1.35rem;
         padding: 2px;
-        display: flex;
+        /* display: flex; */
     }
     .chkMenu:checked+#sidemenu{
         display: flex;
