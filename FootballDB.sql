@@ -31,9 +31,8 @@ CREATE TABLE User(
 CREATE TABLE Merch(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     PicLocation VARCHAR(300), /*lOCATION OF THE PICTURE IN THE FILE SYSTEM */
-    Name VARCHAR(100),
-    Price DECIMAL,
-    Amount INT
+    name VARCHAR(100),
+    Price DECIMAL
 );
 CREATE TABLE Orders(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -66,6 +65,6 @@ CREATE TABLE Fixtures(
 	Name VARCHAR(45),                          
     location varchar(100),  
     ticketPrice DECIMAL,                   
-	DATE DATE,                             
+	DATE DATE                          
     -- CONSTRAINT FOREIGN KEY (ticketId) REFERENCES Merch(ID)
 );
