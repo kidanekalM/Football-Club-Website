@@ -44,14 +44,28 @@
         $picc=$_POST['filename'];
 $query = "UPDATE merch SET name='$namee', price='$pricee',PicLocation='$picc' WHERE id='$id'";
 $connect2=$conn->getConnection();
-$data =mysqli_query($connect2,$query);
-if($data)
-{
-    echo '<script type="text/javascript">'; 
-    echo 'alert("Merch Updated Successfully!");'; 
-    echo 'window.location.href = "../Admin/admin.php";';
-    echo '</script>';
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    if (!preg_match ("/^([a-zA-Z' ]+)$/", $namee) ) {  
+                echo '<script type="text/javascript">';
+                echo 'alert("Only alphabets and whitespace are allowed at Name.");';  
+                echo 'window.location.href = "../Admin-Edit/edit.php?id='.$id.'&name='.$name.'&price='.$price.'&pic='.$pic.'";';
+                echo '</script>';
 
+    }
+    else if (!preg_match ("/^[0-9]*$/", $pricee) ) {  
+        $ErrMsg = "Only numeric value is allowed at Price.";  
+                echo '<script type="text/javascript">';
+                echo 'alert("'.$ErrMsg.'");';
+                echo 'window.location.href = "../Admin-Edit/edit.php?id='.$id.'&name='.$name.'&price='.$price.'&pic='.$pic.'";';
+                echo '</script>';
 
+    }
+    else{
+        $data =mysqli_query($connect2,$query);
+        echo '<script type="text/javascript">'; 
+      echo 'alert("Merch Updated Successfully!");'; 
+      echo 'window.location.href = "../Admin/admin.php";';
+      echo '</script>';
+    }
 }
     }

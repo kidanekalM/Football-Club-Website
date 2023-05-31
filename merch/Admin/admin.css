@@ -15,7 +15,8 @@ body {
     "merches merches";
 }
 .sideimg,
-.sideplayer,.dream {
+.sideplayer,
+.dream {
   display: none;
 }
 
@@ -30,18 +31,12 @@ body {
   bottom: -35px;
   left: -30px;
 }
-.image1 {
-  cursor: pointer;
-}
 .image2 {
   cursor: pointer;
   background-color: white;
   border-radius: 10px;
   position: relative;
   right: 100px;
-}
-.image3 {
-  cursor: pointer;
 }
 .image4 {
   width: 15%;
@@ -69,7 +64,6 @@ p.lbl2 {
   animation: anim 3s infinite;
   border-radius: 10px;
   padding-bottom: 20px;
-
 }
 .search-box {
   position: relative;
@@ -98,13 +92,6 @@ p.lbl2 {
   top: 20px;
   left: 110px;
   font-family: "Oswald", sans-serif;
-}
-.image5 {
-  position: relative;
-  left: -1px;
-  bottom: -3px;
-  width: 9%;
-  background-color: white;
 }
 .merches {
   grid-area: merches;
@@ -160,6 +147,7 @@ button.editmerch {
   box-shadow: 0 0 1px 1px white;
   border-radius: 10px;
   color: black;
+  font-family: "Oswald", sans-serif;
 }
 button.deletemerch {
   width: 70%;
@@ -171,11 +159,11 @@ button.deletemerch {
   box-shadow: 0 0 1px 1px white;
   border-radius: 10px;
   color: black;
+  font-family: "Oswald", sans-serif;
 }
 .m1 {
   background-color: rgba(255, 255, 255, 0.788);
   padding-right: 79%;
-  /*     width: 20px; */
   border-radius: 10px;
   box-shadow: 0 0 15px 1px white;
   position: relative;
@@ -184,11 +172,7 @@ button.deletemerch {
   height: 23vh;
   color: black;
 }
-/* .m2 .s1{
-    position: relative;
-    left: -3px;
-    bottom: -3px;
-} */
+
 .buy {
   position: fixed;
   width: 100%;
@@ -203,56 +187,20 @@ button.deletemerch {
     color: orange;
   }
 }
-/* TABLET */
-/* @media(min-width:600px){
-    .filter{
-        position: relative;
-        bottom: -4px;
-    }
-    .image4{
-        width: 10%;
-    }
-    .right{
-        position: relative;
-        top: 40px;
-    }
-    .search{
-        width: 580px;
-    }
-    .shirt{
-        position: relative;
-        top: 25px;
-    }
-    .d1{
-        position: relative;
-        bottom: 100px;
-        width: 200px;
-    }
-    .m1 .s1,.m3 .s1{
-        position: relative;
-        left: -5px;
-        top: 1px;
-    }
-    button.purchase{
-        position: relative;
-        left: 450px;
-        bottom: 170px;
-    }
-} */
 /*DESKTOP*/
 @media (min-width: 900px) {
   body {
     overflow: hidden;
   }
-  .dream{
+  .dream {
     color: black;
     position: relative;
     top: -119px;
-    left: 526px;
-font-family: "Oswald", sans-serif;
-font-size: 20px;
-display: block;
-}
+    left: 485px;
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    display: block;
+  }
   .main-section {
     width: 100vh;
   }
@@ -272,7 +220,6 @@ display: block;
     bottom: 100px;
     width: 208%;
     padding-bottom: 20px;
-
   }
   .search {
     position: relative;
@@ -291,15 +238,10 @@ display: block;
     top: 7%;
     left: 300px;
   }
-  .image3 {
-    position: relative;
-    left: 50px;
-    top: -4px;
-  }
   .image2 {
     position: relative;
-    top: 23px;
-    left: 10px;
+    top: 26px;
+    left: 73px;
   }
   .shirt {
     width: 140px;
@@ -333,11 +275,6 @@ display: block;
     right: 10px;
     font-size: 10px;
   }
-  /*     .merches{
-        position: relative;
-        left: 290px;
-        bottom: 500px;
-    } */
   .fmenu {
     display: block;
   }
@@ -347,7 +284,6 @@ display: block;
     position: relative;
     bottom: 80px;
     left: 30px;
-    /* letter-spacing: 1mm; */
     font-size: medium;
   }
   .gender {
@@ -360,16 +296,6 @@ display: block;
     bottom: 40px;
     left: -80px;
   }
-  /*     .m1{
-        padding-right: 145%;
-        width: 20%;
-        border-radius:10px;
-        box-shadow:0 0 15px 1px #b5b5b5;
-        position: relative;
-        left: 1px;
-        top: -420px;
-        height: 20%;
-    } */
   button.editmerch {
     position: relative;
     left: 800px;
@@ -377,8 +303,6 @@ display: block;
     background-color: rgba(255, 255, 255, 0.311);
     box-shadow: 0 0 15px 1px #b5b5b5;
     border-radius: 10px;
-    /*         width: 90%;
- */
     font-size: 1rem;
     height: 3.05rem;
     display: block;
@@ -390,8 +314,6 @@ display: block;
     background-color: rgba(255, 255, 255, 0.311);
     box-shadow: 0 0 15px 1px #b5b5b5;
     border-radius: 10px;
-    /*         width: 90%;
- */
     font-size: 1rem;
     height: 3.05rem;
     display: block;
@@ -421,6 +343,6 @@ display: block;
     top: -672px;
     width: 50vh;
     right: 45px;
-    display: block;    
+    display: block;
   }
 }
