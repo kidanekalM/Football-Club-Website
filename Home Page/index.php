@@ -19,28 +19,19 @@
         </a>
         <div class="navbar-links">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">SHOP</a>
+            <li><a href="http://localhost/Football-Club-Website/Home%20Page">HOME</a></li>
+            <li><a href="http://localhost/Football-Club-Website/merch/User/userstore.php">SHOP</a>
              <!-- drop down -->
              <!-- <ul>
               <li><a href="">Merch</a></li>
               <li><a href="">Tickets</a></li>
              </ul> -->
             </li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">FIXTURES</a></li>
-            <li><a href="#">TEAM</a>
-              <!-- <ul>
-                <li>Mens</li>
-                <li>Trophy Cabinet</li>
-              </ul> -->
-            </li>
-            <li><a href="#">CLUB</a>
-              <!-- <ul>
-                <li>History</li>
-                <li>Trophy Cabinet</li>
-              </ul> -->
-            </li>
+            <li><a href="http://localhost/Football-Club-Website/news/news.php">NEWS</a></li>
+            <li><a href="http://localhost/Football-Club-Website/fixtures/fixtures.php">FIXTURES</a></li>
+            <li><a href="http://localhost/Football-Club-Website/team%20members/user/userView.php">TEAM</a></li>
+            <li><a href="#">CLUB </a></li>
+            <li><a href="http://localhost/Football-Club-Website/merch/Login/login.html">Login</a></li>
             <!-- drop down -->
           </ul>
         </div>
