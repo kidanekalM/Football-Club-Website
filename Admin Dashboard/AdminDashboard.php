@@ -34,21 +34,24 @@
             <li><a href="http://localhost/Football-Club-Website/fixtures/fixtures.php">FIXTURES</a></li>
             <li><a href="http://localhost/Football-Club-Website/team%20members/user/userView.php">TEAM</a></li>
             <li><a href="#">CLUB </a></li>
-            <li><a href="http://localhost/Football-Club-Website/merch/Login/login.html">Login</a></li>
+            <li><a href="http://localhost/Football-Club-Website/Admin%20Dashboard/AdminDashboard.php">Admin</a></li>
             <!-- drop down -->
           </ul>
         </div>
       </nav>
 
         <div class="dashboard">
-            <div class="item"><a href=""><img src="../fixtures/img/soccer-player.png" alt=""></a></div>
-            <div class="item"><a href=""><img src="../fixtures/img/soccer-game.png" alt=""></a></div>
-            <div class="item"><a href=""><img src="../fixtures/img/shopping-cart.png" alt=""></a></div>
-            <div class="item"><a href=""><img src="../fixtures/img/news.png" alt=""></a></div>
+            <div class="item"><a href="http://localhost/Football-Club-Website/team%20members/admin/adminView.php">
+              <img src="pics/soccer-player.png" alt=""></a> <a href="http://localhost/Football-Club-Website/team%20members/admin/AdminAdd.php"><button class="btn-manage"><img class="plus-img" src="pics/plus.png" alt=""></button></a><p>12</p></div>
+            <div class="item"><a href="http://localhost/Football-Club-Website/fixtures/managefixtures.php">
+              <img src="pics/soccer-game.png" alt=""><button class="btn-manage">Fixtures</button></a><p>11</p></div>
+            <div class="item"><a href="http://localhost/Football-Club-Website/merch/Admin/admin.php">
+              <img src="pics/shopping-cart.png" alt=""><button class="btn-manage">Merch</button></a><p>15</p></div>
+            <div class="item"><a href="http://localhost/Football-Club-Website/news/manageNews.php"><img src="pics/news.png" alt=""><button class="btn-manage">News</button></a><p>12</p></div>
            
         </div>
         <div class="main-section">
-            main section
+           
         </div>
     </div>
 </body>
