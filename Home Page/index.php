@@ -20,7 +20,7 @@
         <div class="navbar-links">
           <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">SHOP⬇️</a>
+            <li><a href="#">SHOP</a>
              <!-- drop down -->
              <!-- <ul>
               <li><a href="">Merch</a></li>
@@ -35,7 +35,7 @@
                 <li>Trophy Cabinet</li>
               </ul> -->
             </li>
-            <li><a href="#">CLUB⬇️</a>
+            <li><a href="#">CLUB</a>
               <!-- <ul>
                 <li>History</li>
                 <li>Trophy Cabinet</li>
@@ -105,55 +105,44 @@
   <!-- fixture section -->
   <section class="fix">
     <h2>Fixtures</h2>
-    <?php
-                //  $result = mysqli_query($conn,"Select * from fixtures order by date desc");
-                //  $latest = $result->fetch_assoc();
-                //  $latest2 = $result->fetch_assoc();
-               
-                //  $ticket = mysqli_query($conn,"select id from merch where name ='Phoenix vs ".$latest['Name']." on ".$latest['DATE']."'")->fetch_assoc();
-                //  print_r($latest);
-                //  echo "$latest";
-                //  echo "       
-                 
-                 
-                //             <figure class='opponent'>
-                //                 <img src='img/".$latest['Name'].".png' alt='' class='logo'>
-                //                 <figcaption>
-                //                     <h2>".$latest['Name']."</h2>
-                //                 </figcaption>
-                //             </figure>
-                //         </section>
-                        
-                //             <p class='detail date'>".$latest['DATE']."</p>
-                //             <p class='detail location'>".$latest['location']."</p>
-                         
-                //             ";  
-                ?>
-  
     <div class="fixtures">
-      <div class="team">
-        <img class="firstTeam-pic" src="pics/trylogo.png" alt="Team 1 Logo">
-        <span class="vs">vs</span>
-        <img class="secondTeam-pic" src="pics/mc.png" alt="Team 2 Logo">
-        <div class="info">
-          <h3>June 1, 2023</h3>
-          <p>The Phoenix vs Mancity</p>
-          <a href="" class="team-tik">Ticket info</a>
-        </div>
-      </div>
-      <div class="team">
-        <img class="firstTeam-pic " src="pics/mc.png" alt="Team 3 Logo">
-        <span class="vs">vs</span>
-        <img class="secondTeam-pic " src="pics/trylogo.png" alt="Team 4 Logo">
-        <div class="info">
-          <h3>June 5, 2023</h3>
-          <p>Man City vs The Phoenix</p>
-          <a href="" class="team-tik">Ticket info</a>
-        </div>
-      </div>
-      <button class="see-moreFixtures">See More</button>
-    </div>
-  </section>
+    <?php
+                 $result = mysqli_query($conn,"Select * from fixtures order by date LIMIT 2");
+                 $latest = $result->fetch_assoc();
+                 $latest2 = $result->fetch_assoc();
+               
+                //  print_r($latest);
+
+                 echo 
+                 ' <div class="team">
+                 <img class="firstTeam-pic" src="pics/trylogo.png" alt="Team 1 Logo">
+                 <span class="vs">vs</span>
+                 <img class="secondTeam-pic" src="img/'.$latest['Name'].'.png" alt="Team 2 Logo">
+                 <div class="info">
+                   <h3>'.$latest['DATE'].'</h3>
+                   <p>The Phoenix vs '.$latest['Name'].'</p>
+                   <a href="../fixtures/buyTickets.php?id='.$latest['id'].'" class="team-tik">Ticket info</a>
+                 </div>
+                 </div>';
+                 echo 
+                 '   <div class="team">
+                 <img class="firstTeam-pic " src="img/'.$latest2['Name'].'.png" alt="Team 3 Logo">
+                 <span class="vs">vs</span>
+                 <img class="secondTeam-pic " src="pics/trylogo.png" alt="Team 4 Logo">
+                 <div class="info">
+                   <h3>'.$latest2['DATE'].'</h3>
+                   <p>'.$latest2['Name'].' vs The Phoenix</p>
+                   <a href="../fixtures/buyTickets.php?id='.$latest2['id'].'" class="team-tik">Ticket info</a>
+                 </div>
+               </div>
+               '
+                ?>
+               <a href="../fixtures/fixtures.php"><button class="see-moreFixtures">See More</button></a>
+               </div>
+             </section>
+     
+     
+   
   
 
   <!-- Player slider -->
@@ -162,11 +151,36 @@
 
 
 <!-- Store section -->
-
-  <section class="store-section">
+<section class="store-section">
     <h2 class="store-heading">Official Store</h2>
     <div class="store-carousel">
-      <div class="store-item active">
+<?php
+                 $result = mysqli_query($conn,"Select * from merch LIMIT 3");
+                 $item1 = $result->fetch_assoc();
+                 echo 
+                 '<div class="store-item active">
+                 <img src="../merch/User/Pictures/'.$item1['PicLocation'].'" alt="Merchandise 1">
+                 <h3 class="store-item-title">'.$item1['Name'].'</h3>
+                 <p class="store-item-desc">'.$item1['Price'].'</p>
+               </div>';
+               $item2 = $result->fetch_assoc();
+               
+               echo 
+               '<div class="store-item">
+                 <img src="../merch/User/Pictures/'.$item2['PicLocation'].'" alt="Merchandise 2">
+                 <h3 class="store-item-title">'.$item2['Name'].'</h3>
+                 <p class="store-item-desc">'.$item2['Price'].'</p>
+               </div>';
+               $item3 = $result->fetch_assoc();
+               echo 
+               '<div class="store-item">
+                 <img src="../merch/User/Pictures/'.$item3['PicLocation'].'" alt="Merchandise 2">
+                 <h3 class="store-item-title">'.$item3['Name'].'</h3>
+                 <p class="store-item-desc">'.$item3['Price'].'</p>
+               </div>';
+
+?>
+      <!-- <div class="store-item active">
         <img src="pics/shirt.png" alt="Merchandise 1">
         <h3 class="store-item-title">Shirt</h3>
         <p class="store-item-desc">900 EtB</p>
@@ -180,13 +194,17 @@
         <img src="pics/boot.png" alt="Merchandise 3">
         <h3 class="store-item-title">Boots</h3>
         <p class="store-item-desc">1000 EtB</p>
-      </div>
+      </div> -->
 
 
       <button class="prev-button">&#10094;</button>
       <button class="next-button">&#10095;</button>
     </div>
-    <button class="store-button">Shop Now</button>
+    <?php
+    echo
+    ' <a class = "store-button-link" href="../merch/User/userstore.php"><button class="store-button">Shop Now</button></a>';
+     ?>
+    
   </section>
   
   <section class="footer">
