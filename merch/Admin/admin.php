@@ -15,7 +15,7 @@
 
         <div class="left">
             <div class="logos">
-                <img src="Pictures/trylogo.png" alt="" class="image4">
+            <a href="http://localhost/Football-Club-Website/Home%20Page"><img src="Pictures/trylogo.png" alt="" class="image4"></a>
                 <p class="lbl1">PHOENIX F.C.</p>
                 <p class="lbl2">OFFICIAL ONLINE STORE</p>
             </div>

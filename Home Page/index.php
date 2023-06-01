@@ -41,7 +41,7 @@
 
       <!-- Hero Section -->
       <section class="hero">
-        <h1 class="flaming-text">Welcome to The Phoenix</h1>
+        <h1 class="flaming-text">Phoenix Football Club</h1>
         <p class="flaming-text">Home of the Flames</p>
       </section>
 
@@ -50,7 +50,7 @@
       <div class="news-section">
 
       <section class="news-section">
-      <h2>Lateast News→</h2>
+      <h2>Latest News→</h2>
       <?php
       // echo "swdecsfg";
       include ("../connect.php");
@@ -151,7 +151,7 @@
                  echo 
                  '<div class="store-item active">
                  <img src="../merch/User/Pictures/'.$item1['PicLocation'].'" alt="Merchandise 1">
-                 <h3 class="store-item-title">'.$item1['Name'].'</h3>
+                 <h3 class="store-item-title">'.$item1['name'].'</h3>
                  <p class="store-item-desc">'.$item1['Price'].'</p>
                </div>';
                $item2 = $result->fetch_assoc();
@@ -159,14 +159,14 @@
                echo 
                '<div class="store-item">
                  <img src="../merch/User/Pictures/'.$item2['PicLocation'].'" alt="Merchandise 2">
-                 <h3 class="store-item-title">'.$item2['Name'].'</h3>
+                 <h3 class="store-item-title">'.$item2['name'].'</h3>
                  <p class="store-item-desc">'.$item2['Price'].'</p>
                </div>';
                $item3 = $result->fetch_assoc();
                echo 
                '<div class="store-item">
                  <img src="../merch/User/Pictures/'.$item3['PicLocation'].'" alt="Merchandise 2">
-                 <h3 class="store-item-title">'.$item3['Name'].'</h3>
+                 <h3 class="store-item-title">'.$item3['name'].'</h3>
                  <p class="store-item-desc">'.$item3['Price'].'</p>
                </div>';
 
@@ -199,7 +199,7 @@
   </section>
   
   <section class="footer">
-    <h2>SponsorShip</h2>
+    <h2>Sponsorship</h2>
   <div class="wrapper">
     <div class="main-sponsors">
         <a  class="img1" href="https://astropay.com">

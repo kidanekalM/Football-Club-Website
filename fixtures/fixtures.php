@@ -26,7 +26,7 @@
                  echo "<img src='img/Phoenix.png' alt='Team Logo' class='logo'>";
                  echo "<figcaption><h2>Phoenix</h2></figcaption>";
                  echo "</figure>";
-                 $ticket = mysqli_query($conn,"select id from merch where name ='Phoenix vs ".$latest['Name']." on ".$latest['DATE']."'")->fetch_assoc();
+                //  $ticket = mysqli_query($conn,"select id from fixtures where name ='Phoenix vs ".$latest['Name']." on ".$latest['DATE']."'")->fetch_assoc();
                  echo "<p class='vs'>
                             Vs
                         </p>                 
@@ -40,7 +40,7 @@
                         
                             <p class='detail date'>".$latest['DATE']."</p>
                             <p class='detail location'>".$latest['location']."</p>
-                            <a href='buyTickets.php?id=".$ticket['id']."'><button id='buy' >Buy Ticket Now</button></a>
+                            <a href='buyTickets.php?id=".$latest['id']."'><button id='buy' >Buy Ticket Now</button></a>
                     
                         </main>";  
                 ?>
@@ -70,8 +70,7 @@
                             <p class='detail location'>".$other['location']."</p>
                             <a href='buyTickets.php?id=".$other['id']."'><button id='buy' >Buy Ticket Now</button></a>
                     
-                            </main>
-                            ";
+                            </main>";
                     } 
                 ?>
                 <?php

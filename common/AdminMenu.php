@@ -9,7 +9,7 @@
   </head>
   <body>
     <header id="header">
-      <img src="../img/Phoenix.png" alt="" id="logo">
+    <a href="http://localhost/Football-Club-Website/Home%20Page"><img src="../img/Phoenix.png" alt="" id="logo"></a>
       <div class="menuwrapper">
         <label for="chk"><img src="../img/more.png" alt="" class="menuicon" id="menuicon"></label>
         <input type="checkbox" id="chk" class="chkMenu">

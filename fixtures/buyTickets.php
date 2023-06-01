@@ -99,9 +99,63 @@
                     $response = curl_exec($curl);
                     $response = json_decode($response,true);
                     curl_close($curl);
-                    // print_r($response['data']['checkout_url']);
-                    // echo $response;
-                    header('Location: '.$response['data']['checkout_url']);
+                    
+                    if($response['status']=='success'){
+
+                        //Send Email
+                        $date = date('dd-mm-yyyy');
+                        $id = $tx_ref;
+                        $body = "You have successfully bought tickets for Phoenix vs ".$other['Name']. " game in ".$other['location'] ." on ".$other['DATE'];
+                        $total = $other['ticketPrice'];
+                        // send email
+                        ini_set('SMTP','smtp.abc.gmail.cada');
+                        ini_set("sendmail_from",'Phoenixdreamteamfc@gmail.com');
+                        ini_set("smtp_port","367");
+                        ini_set();
+                        $to      = $_POST['email'];
+                        $subject = 'Ticket Reciept';
+                        $message = '<html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Reciept</title>
+                            <style>
+
+                            </style>
+                            <link rel="stylesheet" href="reciept.css">
+                            <link rel="shortcut icon" href="img/logo3.png" type="image/x-icon">
+                        </head>
+                        <body>
+                            <div class="wrapper" style=" display: grid;">
+                              <div class="container" style="max-width: 700px; justify-self: center; display: grid;">
+                                <p class="date">'.$date.'</p>
+                                <img src="img/Phoenix.png"  alt="" style="justify-self: center;max-width: 100px; ">
+                                <h1 class="title" style="justify-self: center;">Reciept for Purchase from Phoenix F.C.</h1>
+                                <hr style="width: 100%;">
+                                <canvas class="qrcode"></canvas>
+                                <h2 class="txt_ref"> Reference Number: <b>'.$txt_ref.'</b> </h2>
+                                <p class="narrative" style="color: rgb(63, 63, 63);">'.$body.'</p>
+                                
+                                <hr style="color: rgb(224, 224, 224);">
+                                <h3 class="total">Total: '.$other['ticketPrice'].' Birr</h3>
+                        
+                              </div>
+                            </div>
+                        </body>
+                        </html>';
+                        $headers = 'From: Phoenixdreamteamfc@gmail.com'       . "\r\n" .
+                                     'Reply-To: Phoenixdreamteamfc@gmail.com' . "\r\n" .
+                                     'X-Mailer: PHP/' . phpversion()."\r\n"." Content-type:text/html;charset =utf-8"."\r\n";
+                        echo "<script>alert('your private key is ".$tx_ref." bring this number to take your number')</script>";             
+                        mysqli_query($conn,"insert into Reciept values('".$txt_ref."','".$body."','".$date."',".$total." )");
+                        $res =  mail($to, $subject, $message, $headers);
+                        print_r($res);
+
+                        // \ send email
+                        echo '<script>alert("we have sent you an email containing your reciept Enjoy the game!")</script>';
+                        header('Location: '.$response['data']['checkout_url']);
+                    }
                 }
                 else{
                     // echo '<script>alert("naaa")</script>';

@@ -31,7 +31,7 @@
                         
                         
                          echo '<div class="container">';
-                         echo '<h1>'.'GOAL KEEPERS'.'</h1>';
+                         echo '<h1>'.'GOALKEEPERS'.'</h1>';
                          echo '<div class="gk" >';
                 
                    foreach($data as $img){
@@ -70,7 +70,7 @@
                         }
             
                         echo '</div>';
-                        echo '<h1>'.'MIDFILDERS'.'</h1>';
+                        echo '<h1>'.'MIDFIELDERS'.'</h1>';
                         echo'<div class="mid">';
                         foreach($data as $img){
                             $status = $img['Status'];

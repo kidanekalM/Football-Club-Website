@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 
 
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    font-family: "Oswald", sans-serif;
+
     word-spacing: 9px;
     /* background-color: red; */
 }

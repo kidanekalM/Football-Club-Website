@@ -1,4 +1,6 @@
 @import url('../../common/AdminMenu.css');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -6,9 +8,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   word-spacing: 9px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-body {
-}
+
 .wrapper {
   width: 100vw;
   padding-top: 1vh;
