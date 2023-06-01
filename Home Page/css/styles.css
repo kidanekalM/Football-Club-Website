@@ -593,6 +593,9 @@ body {
     color: black;
     transition: background-color 0.3s ease;
   }
+  .store-button-link{
+    text-decoration: none;
+  }
   
   .store-button:hover {
     background-color: #FF6000;
