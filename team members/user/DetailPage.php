@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="store.css">
   <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <?php
@@ -30,7 +31,7 @@ if($result->num_rows>0){
         foreach($data as $item){
             echo '<div class="main">';
             echo'<div class="player">';
-            echo'<img  src="../images/'.$item['PicLocation']. '" />';
+            echo'<img class="player_img" src="../images/'.$item['PicLocation']. '" />';
             echo'<h3>'.$item['FName'].' '.' '.$item['LName'].'</h3>';
             echo'</div>';
             echo'<div class="para">';
@@ -59,16 +60,56 @@ if($result->num_rows>0){
         echo '<h3 class="store-item-title">'.'Boots'.'</h3>';
         echo '<p class="store-item-desc">'.'Description of Merchandise 3'.'</p>';
       echo '</div>';
-
-
-    // echo '<button class="prev-button">'.'&#10094;'.'</button>';
-     //echo '<button class="next-button">'.'&#10095;'.'</button>';
      echo '</div>';
-     echo '<button class="store-button">'.'Shop Now'.'</button>';
+     echo '<a href="../../merch/user/userstore.php"><button class="store-button">'.'Shop Now'.'</button></a>';
      echo'</section>';
+     echo'</div>';
+ //comment
+ echo'<section class="footer">
+ <h2>SponsorShip</h2>
+<div class="wrapper">
+ <div class="main-sponsors">
+     <a  class="img1" href="https://astropay.com">
+         <img class="img1" alt="" src="pics/AstroPay.jpg">
+     </a>
+     <a  class="img2" href="https://www.castore.com">
+         <img class="img2" alt="" src="pics/logo.svg">
+     </a>
+     <a  class="img3" href="https://tradenation.com">
+         <img class="img3" alt="" src="pics/TradeNation.gif">
+     </a>
+ </div>
+ <div class="secondary-sponsors">
+     <a class="img4" href="https://arcticwolf.com/uk/">
+         <img class="img4" alt="" src="pics/arcticWolf.webp">
+     </a>
+     <a class="img5" href="https://asphaltlegends.com/">
+         <img class="img5" alt="" src="pics/a9-logo.png">
+     </a>
+     <a class="img6" href="https://www.royalcaribbean.com">
+         <img class="img6" alt="" src="pics/royalcaribbean.webp">
+     </a>
+     <a class="img7" href="https://www.12bet.uk">
+         <img class="img7" alt="" src="pics/12bet.webp">
+     </a>
+     <a class="img8" href="https://asphaltlegends.com/">
+         <img class="img8" alt="" src="pics/a9-logo.png">
+     </a>
+   
+     <a class="img9" href="https://www.footballco.com">
+         <img class="img9" alt="" src="pics/footbaleco.png">
+     </a>
+ </div>
  
+     <div class="social-links">
 
-            echo'</div>';
+     </div>
+
+</div>
+</section>';
+
+       
+
 
         }
     }else{
