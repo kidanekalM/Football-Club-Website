@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" type="text/css" href="css/index.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="css/slider.css">
       <title>The Phoenix Football Club</title>
     </head>
     <body>
@@ -137,9 +138,44 @@
   
 
   <!-- Player slider -->
-
-
-
+  <div class="parent-slider-container">
+  <div class="slider-container">
+    
+    <div class="slider">
+      <div class="slide">
+        <div class="player">
+          <img src="pics/MenPlayers/10 Daniel Podence.png" alt="Player 1">
+          <div class="player-info">
+            <h2>Most Goals</h2>
+            <h3>Daniel Podence</h3>
+            <p>Scored <span class="stat">30</span> goals in the season</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="player">
+          <img src="pics/MenPlayers/12 Matheus Cunha.png" alt="Player 1">
+          <div class="player-info">
+            <h2>Most Assists</h2>
+            <h3>Matheus Cunha</h3>
+            <p>Assisted <span class="stat">15</span> goals in the season</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="player">
+          <img src="pics/MenPlayers/15Craig Dawson.png" alt="Player 3">
+          <div class="player-info">
+            <h2>Most Goals and Assists</h2>
+            <h3>Craig Dawson</h3>
+            <p>Scored <span class="stat">20</span> goals and provided <span class="stat">15</span> assists in the season</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="http://localhost/Football-Club-Website/team%20members/user/userView.php"><button>All Players</button></a>
+  </div>
 
 <!-- Store section -->
 <section class="store-section">
@@ -265,6 +301,7 @@
 </section>
       <script src="js/index.js"></script>
       <script src="js/script.js" defer></script>
+      <script src="js/slider.js"></script>
     </body>
   </html>
 
