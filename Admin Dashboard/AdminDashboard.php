@@ -40,19 +40,59 @@
         </div>
       </nav>
 
+      <?php
+      include ("../connect.php");
+      $conn = new connect;
+      $conn = $conn->getConn();
+
+      
+      $sql = "select * from News;";
+      $allNews = $conn->query($sql);
+      $num_news = mysqli_num_rows($allNews);
+      if(empty($num_news)){
+        $num_news=0;
+      }
+
+  
+      $sql2 = "select * from Merch;";
+      $allMerchs = $conn->query($sql2);
+      $num_merchs = mysqli_num_rows($allMerchs);
+      if(empty($num_merchs)){
+        $num_merchs=0;
+      }
+
+     
+      $sql3 = "select * from Fixtures;";
+      $allFixtures = $conn->query($sql3);
+      $num_fixtures = mysqli_num_rows($allFixtures);
+      if(empty($num_fixtures)){
+        $num_fixtures=0;
+      }
+
+      $sql4 = "select * from Team;";
+      $allTeam = $conn->query($sql4);
+      $num_team = mysqli_num_rows($allTeam);
+      if(empty($num_team)){
+        $num_team=0;
+      }
+
+      echo '
         <div class="dashboard">
             <div class="item"><a href="http://localhost/Football-Club-Website/team%20members/admin/adminView.php">
-              <img src="pics/soccer-player.png" alt=""></a> <a href="http://localhost/Football-Club-Website/team%20members/admin/AdminAdd.php"><button class="btn-manage"><img class="plus-img" src="pics/plus.png" alt=""></button></a><p>12</p></div>
+              <img src="pics/soccer-player.png" alt=""></a> <a href="http://localhost/Football-Club-Website/team%20members/admin/AdminAdd.php">
+              <button class="btn-manage"><img class="plus-img" src="pics/plus.png" alt=""></button></a><p>'.$num_team.'</p></div>
             <div class="item"><a href="http://localhost/Football-Club-Website/fixtures/managefixtures.php">
-              <img src="pics/soccer-game.png" alt=""><button class="btn-manage">Fixtures</button></a><p>11</p></div>
+              <img src="pics/soccer-game.png" alt=""><button class="btn-manage">Fixtures</button></a><p>'.$num_fixtures.'</p></div>
             <div class="item"><a href="http://localhost/Football-Club-Website/merch/Admin/admin.php">
-              <img src="pics/shopping-cart.png" alt=""><button class="btn-manage">Merch</button></a><p>15</p></div>
-            <div class="item"><a href="http://localhost/Football-Club-Website/news/manageNews.php"><img src="pics/news.png" alt=""><button class="btn-manage">News</button></a><p>12</p></div>
+              <img src="pics/shopping-cart.png" alt=""><button class="btn-manage">Merch</button></a><p>'.$num_merchs.'</p></div>
+            <div class="item"><a href="http://localhost/Football-Club-Website/news/manageNews.php"><img src="pics/news.png" alt="">
+            <button class="btn-manage">News</button></a><p>'.$num_news.'</p></div>
            
         </div>
         <div class="main-section">
            
         </div>
-    </div>
+    </div>';
+    ?>
 </body>
 </html>
