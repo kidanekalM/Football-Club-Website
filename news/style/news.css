@@ -1,6 +1,9 @@
 @import url('../../common/AdminMenu.css');
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 
+html{
+  overflow-x: hidden;
+}
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -223,7 +226,8 @@ button img {
     flex-direction: column;
     grid-template-columns: 1fr;
     row-gap: 20px;
-    grid-template-areas: 'main '
+    grid-template-areas: 'header '
+                          'main '
                           ' other';
                           align-content: space-around;
   }

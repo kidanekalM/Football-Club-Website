@@ -29,7 +29,6 @@
                 <div class="other"><input type="reset" value="clear"> <input type="submit" value="submit" name="submit"></div>
             </form>
         <?php
-        echo "aaaaaaaaaaaaaaaaaaaaaa";
             if(isset($_POST['submit']))
             {
                 if(isset($_FILES['myImage'])){
@@ -59,8 +58,8 @@
                 if($conn->query($sql)){
                     echo "<script> console.log('Changed')</script>";
                     echo "<script>alert('updated successfully!')</script>";
-                    header("Refresh: 1; URL=managenews.php");
-                }
+                    // header('Location: http://localhost/Football-Club-Website/news/manageNews.php');
+                 }
                 else{
                     echo "<script>alert('Changed') console.log('Not Changed')</script>";
                 }

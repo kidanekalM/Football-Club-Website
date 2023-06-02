@@ -4,7 +4,9 @@
       font-family: "Oswald", sans-serif;
 
 }
-
+html{
+  overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -218,6 +220,11 @@ body {
     font-size: 16px;
     margin-bottom: 20px;
     padding-left: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+    display: inline-block;
   }
   
   .news .btn-readMore {

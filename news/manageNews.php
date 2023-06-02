@@ -21,10 +21,11 @@
             <input type="text" id="txt_search">
 
             <button id="btn_search"><img src="img/search.png" alt=""></button>
-            
+            <a href="http://localhost/Football-Club-Website/news/addNews.php">
             <button class="add">
                 <img src="img/add.png" alt="">
             </button>
+            </a>
         </div>
         <main>
         <?php
@@ -49,43 +50,11 @@
             }
 
             if(isset($_GET['id'])){
-                $sql = "delete from news where id =".$_GET['id'];
-                
+                $sql = "delete from News where id =".$_GET['id'];
+                mysqli_query($conn,$sql);
             }
         }
         ?>
-        <figure class='news'>
-            <img class='thumbnail' src='img/fight.jpg' >
-            <figcaption><h3>Titile</h3>
-                <p>Desc</p>
-            </figcaption>
-            <figure class='manage'>
-                <a href='editNews.html'><img src='img/edit.png' id='edit' title='Edit News' alt='Edit News'></a>
-                <img src='img/delete.png' id='delete' alt='Delete News' title='Delete News'>
-            </figure>
-        </figure>
-        <figure class="news">
-            <img class="thumbnail" src="img/emptyStadium.png" alt="">
-            <figcaption><h3>Titile</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis eligendi praesentium ab atque dolore, incidunt nihil quos ratione necessitatibus beatae?</p>
-            </figcaption>
-            <figure class="manage">
-                <a href="editNews.html"><img src="img/edit.png" id="edit" title="Edit News" alt="Edit News"></a>
-                <img src="img/delete.png" id="delete" alt="Delete News" title="Delete News">
-            </figure>
-        </figure>
-        <figure class="news">
-            <img class="thumbnail" src="img/logo3.png" alt="">
-            <figcaption><h3>Titile</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis eligendi praesentium ab atque dolore, incidunt nihil quos ratione necessitatibus beatae?</p>
-            </figcaption>
-            <figure class="manage">
-                <a href="editNews.html"><img src="img/edit.png" id="edit" title="Edit News" alt="Edit News"></a>
-                <a href="viewnewsadmin.html"><img src="img/delete.png" id="deelte" alt="Delete News" title="Delete News"></a>
-                
-            </figure>
-        </figure>
-       
         </main> 
     </div>
 </body>
